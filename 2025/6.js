@@ -14,16 +14,16 @@ for (let i = 0; i < operationsRow.length; i += 2) {
   operationStrings[i] = "";
 }
 
-for (const problem of problems) {
-  for (let i = 0; i < problem.length; i += 2) {
-    operationStrings[i] += problem[i] + operations[i];
+for (let i = 0; i < problems.length; i++) {
+  const problem = problems[i];
+
+  for (let j = 0; j < problem.length; j += 2) {
+    if (i === problems.length - 1) {
+      operationStrings[j] += problem[j];
+      continue;
+    }
+    operationStrings[j] += problem[j] + operations[j];
   }
-}
-
-for (const operationStringKey of Object.keys(operationStrings)) {
-  const value = operationStrings[operationStringKey];
-
-  operationStrings[operationStringKey] = value.slice(0, value.length - 1);
 }
 
 let result = 0;
