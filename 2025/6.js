@@ -26,9 +26,9 @@ for (let i = 0; i < problems.length; i++) {
   }
 }
 
-let result = 0;
-Object.values(operationStrings).forEach((string) => {
-  result += eval(string);
-});
+const result = Object.values(operationStrings).reduce(
+  (sum, value) => sum += eval(value),
+  0,
+);
 
 console.log(result);
