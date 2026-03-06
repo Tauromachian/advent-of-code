@@ -5,25 +5,13 @@ const input = [
   818181911112111,
 ];
 
-function findBiggestNumberThatIsNotLastNumber(input) {
+function findBiggestNumber(input, high) {
   let largestNumber = 0;
 
-  for (let i = 0; i < input.length - 1; i++) {
-    if (input[i] > largestNumber) {
-      largestNumber = Number(input[i]);
-    }
-  }
+  high ??= input.length;
 
-  return largestNumber;
-}
-
-function findBiggestNumber(input) {
-  let largestNumber = 0;
-
-  for (const char of input) {
-    if (char > largestNumber) {
-      largestNumber = Number(char);
-    }
+  for (let index = 0; index < high; index++) {
+    if (input[index] > largestNumber) largestNumber = String(input[index]);
   }
 
   return largestNumber;
@@ -31,13 +19,14 @@ function findBiggestNumber(input) {
 
 let total = 0;
 
-for (const item of input) {
-  const firstValue = findBiggestNumberThatIsNotLastNumber(String(item));
+for (let item of input) {
+  item = String(item);
 
+  const firstValue = findBiggestNumber(item, item.length - 1);
   const indexOfFirstValue = String(item).indexOf(firstValue);
 
   const secondValue = findBiggestNumber(
-    String(item).slice(indexOfFirstValue + 1),
+    item.slice(indexOfFirstValue + 1),
   );
 
   total += Number(`${firstValue}${secondValue}`);
