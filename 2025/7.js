@@ -29,8 +29,8 @@ for (let i = 2; i < tachyonDiagram.length; i++) {
     }
 
     if (tachyonDiagram[i][j] === "^" && tachyonDiagram[i - 1][j] === "|") {
-      if (tachyonDiagram[i][j - 1] === ".") tachyonDiagram[i][j - 1] = "|";
-      if (tachyonDiagram[i][j + 1] === ".") tachyonDiagram[i][j + 1] = "|";
+      tachyonDiagram[i][j - 1] = "|";
+      tachyonDiagram[i][j + 1] = "|";
 
       tachyonManifoldCount++;
     }
