@@ -35,7 +35,6 @@ func main() {
 		818181911112111,
 	}
 
-	log.Fatal("ooo")
 	total := 0
 
 	for _, value := range input {
