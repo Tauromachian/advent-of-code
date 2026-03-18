@@ -28,7 +28,7 @@ func findBiggestNumber(input string, high int) (int, error) {
 }
 
 func main() {
-	input := [...]int{
+	input := []int{
 		987654321111111,
 		811111111111119,
 		234234234234278,

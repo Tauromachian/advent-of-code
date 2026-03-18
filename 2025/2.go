@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	input := [...]string{
+	input := []string{
 		"11-22",
 		"95-115",
 		"998-1012",

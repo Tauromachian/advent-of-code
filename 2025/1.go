@@ -47,7 +47,7 @@ func getRotationNumber(rotationString, rotationChar string) (int, error) {
 }
 
 func main() {
-	rotations := [10]string{"L68", "L30", "R48", "L5", "R60", "L55", "L1", "L99", "R14", "L82"}
+	rotations := []string{"L68", "L30", "R48", "L5", "R60", "L55", "L1", "L99", "R14", "L82"}
 	password := 0
 	barrel := 50
 

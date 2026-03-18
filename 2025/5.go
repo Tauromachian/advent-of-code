@@ -18,7 +18,7 @@ func getIndexOfEmptyStr(input []string) int {
 }
 
 func main() {
-	input := [...]string{
+	input := []string{
 		"3-5",
 		"10-14",
 		"16-20",

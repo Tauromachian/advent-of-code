@@ -11,7 +11,7 @@ type coordinate struct {
 func countAdjacentRolls(input [][]string, i, j int) int {
 	adjacentRolls := 0
 
-	adjacentCoordinates := [...]coordinate{
+	adjacentCoordinates := []coordinate{
 		{i: 0, j: 1},
 		{i: 1, j: 1},
 		{i: 1, j: 0},
@@ -48,7 +48,7 @@ func countAdjacentRolls(input [][]string, i, j int) int {
 }
 
 func main() {
-	input := [...][]string{
+	input := [][]string{
 		{".", ".", "@", "@", ".", "@", "@", "@", "@", "."},
 		{"@", "@", "@", ".", "@", ".", "@", ".", "@", "@"},
 		{"@", "@", "@", "@", "@", ".", "@", ".", "@", "@"},
