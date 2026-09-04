@@ -1,6 +1,6 @@
 const fs = require("node:fs");
 
-let input = fs.readFileSync("./1.input.txt", { encoding: "utf-8" });
+let input = fs.readFileSync("./input.txt", { encoding: "utf-8" });
 input = input.split("\n");
 
 function rotateLeft(barrel, amount) {
