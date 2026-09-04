@@ -27,23 +27,21 @@ function ensureTwoDigits(value) {
   return value;
 }
 
-(function start() {
-  let password = 0;
-  let barrel = 50;
+let password = 0;
+let barrel = 50;
 
-  for (const item of input) {
-    if (item.includes("L")) {
-      const number = Number(item.replace("L", ""));
-      barrel = rotateLeft(barrel, ensureTwoDigits(number));
-    }
-
-    if (item.includes("R")) {
-      const number = Number(item.replace("R", ""));
-      barrel = rotateRight(barrel, ensureTwoDigits(number));
-    }
-
-    if (barrel == 0) password++;
+for (const item of input) {
+  if (item.includes("L")) {
+    const number = Number(item.replace("L", ""));
+    barrel = rotateLeft(barrel, ensureTwoDigits(number));
   }
 
-  console.log(password);
-})();
+  if (item.includes("R")) {
+    const number = Number(item.replace("R", ""));
+    barrel = rotateRight(barrel, ensureTwoDigits(number));
+  }
+
+  if (barrel == 0) password++;
+}
+
+console.log(password);
