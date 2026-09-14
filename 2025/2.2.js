@@ -22,10 +22,10 @@ var total = 0;
 for (const range of input) {
   const rangeArray = range.split("-");
 
-  let stringStart = rangeArray[0];
+  let [stringStart, stringEnd] = rangeArray;
 
   let start = Number(stringStart);
-  const end = Number(rangeArray[1]);
+  const end = Number(stringEnd);
 
   while (start <= end) {
     const hasPatterns = hasRepeatedPatterns(stringStart);
