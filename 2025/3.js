@@ -1,9 +1,7 @@
-const input = [
-  987654321111111,
-  811111111111119,
-  234234234234278,
-  818181911112111,
-];
+const fs = require("node:fs");
+
+let input = fs.readFileSync("./input.txt", { encoding: "utf-8" });
+input = input.split("\n");
 
 function findBiggestNumber(input, high) {
   let largestNumber = 0;
