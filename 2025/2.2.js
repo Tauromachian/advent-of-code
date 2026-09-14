@@ -3,8 +3,6 @@ const fs = require("node:fs");
 let input = fs.readFileSync("./input.txt", { encoding: "utf-8" });
 input = input.split(",");
 
-let total = 0;
-
 function hasRepeatedPatterns(value) {
   const string = String(value);
   const stopNumber = Math.floor(string.length / 2);
@@ -21,7 +19,8 @@ function hasRepeatedPatterns(value) {
   return false;
 }
 
-input.forEach((range) => {
+var total = 0;
+for (const range of input) {
   const rangeArray = range.split("-");
 
   let stringStart = String(rangeArray[0]);
@@ -37,6 +36,6 @@ input.forEach((range) => {
     start++;
     stringStart = String(start);
   }
-});
+}
 
 console.log(total);
