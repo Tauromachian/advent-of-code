@@ -1,16 +1,7 @@
-const input = [
-  "3-5",
-  "10-14",
-  "16-20",
-  "12-18",
-  "",
-  "1",
-  "5",
-  "8",
-  "11",
-  "17",
-  "32",
-];
+const fs = require("node:fs");
+
+let input = fs.readFileSync("./input.txt", { encoding: "utf-8" });
+input = input.split("\n");
 
 const indexOfBlankLine = input.indexOf("");
 
